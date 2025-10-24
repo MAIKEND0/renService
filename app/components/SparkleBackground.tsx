@@ -8,22 +8,28 @@ interface Sparkle {
   y: number;
   size: number;
   duration: number;
+  delay: number;
+  type: string;
 }
 
 export default function SparkleBackground() {
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
 
   useEffect(() => {
-    // Generuj losowe gwiazdki
+    const sparkleTypes = ['✨', '⭐', '💫', '🌟', '💎', '✦', '★'];
+
     const generateSparkles = () => {
       const newSparkles: Sparkle[] = [];
-      for (let i = 0; i < 15; i++) {
+      // Więcej gwiazdek!
+      for (let i = 0; i < 40; i++) {
         newSparkles.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 20 + 10,
-          duration: Math.random() * 3 + 2,
+          size: Math.random() * 25 + 10,
+          duration: Math.random() * 3 + 1.5,
+          delay: Math.random() * 5,
+          type: sparkleTypes[Math.floor(Math.random() * sparkleTypes.length)],
         });
       }
       setSparkles(newSparkles);
@@ -43,11 +49,29 @@ export default function SparkleBackground() {
             top: `${sparkle.y}%`,
             fontSize: `${sparkle.size}px`,
             animationDuration: `${sparkle.duration}s`,
-            opacity: 0.1,
+            animationDelay: `${sparkle.delay}s`,
+            opacity: Math.random() * 0.5 + 0.3,
+            filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))',
           }}
         >
-          ✨
+          {sparkle.type}
         </div>
+      ))}
+
+      {/* Dodatkowe małe migające punkty światła */}
+      {[...Array(60)].map((_, i) => (
+        <div
+          key={`star-${i}`}
+          className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDuration: `${Math.random() * 4 + 1}s`,
+            animationDelay: `${Math.random() * 3}s`,
+            opacity: Math.random() * 0.6 + 0.2,
+            boxShadow: '0 0 5px rgba(255, 255, 255, 0.8)',
+          }}
+        />
       ))}
     </div>
   );
