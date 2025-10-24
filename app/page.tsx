@@ -3,19 +3,21 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Sparkles, Home, Building2, Phone, Mail, CheckCircle } from 'lucide-react';
+import SparkleBackground from './components/SparkleBackground';
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      <SparkleBackground />
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-8 h-8 text-blue-600" />
-              <span className="text-2xl font-bold text-gray-900">RenService</span>
+            <div className="flex items-center gap-2 shine">
+              <Sparkles className="w-8 h-8 text-blue-600 animate-pulse" />
+              <span className="text-2xl font-bold text-gray-900 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">RenService</span>
             </div>
 
             <div className="hidden md:flex gap-8">
@@ -77,15 +79,15 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200"
+              className="shine inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transform duration-200 relative overflow-hidden"
             >
-              Få et tilbud
+              <span className="relative z-10">Få et tilbud</span>
             </a>
             <a
               href="tel:50124422"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-lg font-semibold hover:bg-white/20 transition-colors shadow-xl"
+              className="shine inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-lg font-semibold hover:bg-white/20 transition-all shadow-2xl hover:shadow-white/30 relative overflow-hidden"
             >
-              Ring nu
+              <span className="relative z-10">Ring nu</span>
             </a>
           </div>
         </div>
@@ -101,10 +103,15 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="om-os" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section id="om-os" className="py-20 px-4 bg-gradient-to-b from-blue-50/30 to-white relative overflow-hidden">
+        {/* Decorative sparkles */}
+        <div className="absolute top-20 left-10 text-6xl opacity-20">✨</div>
+        <div className="absolute top-40 right-20 text-4xl opacity-20">💎</div>
+        <div className="absolute bottom-20 left-1/4 text-5xl opacity-20">⭐</div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Om os</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-4">Om os</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Vi er et professionelt rengøringsfirma med fokus på kvalitet og kundetilfredshed.
               Vores erfarne team sikrer, at dit hjem eller kontor altid er rent og velholdt.
@@ -112,31 +119,31 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
+            <div className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-xl shine hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-blue-100">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30 clean-glow">
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Professionel kvalitet</h3>
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Professionel kvalitet</h3>
               <p className="text-gray-600">
                 Vi bruger professionelt udstyr og miljøvenlige produkter for det bedste resultat.
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
+            <div className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-xl shine hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-blue-100">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30 clean-glow">
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Pålidelig service</h3>
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Pålidelig service</h3>
               <p className="text-gray-600">
                 Vi kommer til tiden og leverer konsistent høj kvalitet ved hver rengøring.
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-blue-600" />
+            <div className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-xl shine hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-blue-100">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30 clean-glow">
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Fleksible løsninger</h3>
+              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Fleksible løsninger</h3>
               <p className="text-gray-600">
                 Vi tilpasser vores service efter dine specifikke behov og ønsker.
               </p>
@@ -214,20 +221,21 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Home Cleaning */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 w-full">
+            <div className="shine bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-2 border border-blue-100 relative group">
+              <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/images/home-cleaning.jpg"
                   alt="Privat rengøring"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="p-8">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                  <Home className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-blue-500/50 clean-glow">
+                  <Home className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Privat rengøring</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Privat rengøring</h3>
               <p className="text-gray-600 mb-6">
                 Få dit hjem til at skinne med vores grundige hjemmerengøring.
               </p>
@@ -249,20 +257,21 @@ export default function HomePage() {
             </div>
 
             {/* Office Cleaning */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 w-full">
+            <div className="shine bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-2 border border-blue-100 relative group">
+              <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/images/office-cleaning.jpg"
                   alt="Kontorrengøring"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="p-8">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                  <Building2 className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-blue-500/50 clean-glow">
+                  <Building2 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Kontorrengøring</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Kontorrengøring</h3>
               <p className="text-gray-600 mb-6">
                 Professionel rengøring af kontorer og erhvervslokaler.
               </p>
@@ -284,20 +293,21 @@ export default function HomePage() {
             </div>
 
             {/* Deep Cleaning */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-48 w-full">
+            <div className="shine bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-2 border border-blue-100 relative group">
+              <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/images/deep-cleaning.jpg"
                   alt="Hovedrengøring"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="p-8">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                  <Sparkles className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-blue-500/50 clean-glow animate-pulse">
+                  <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Hovedrengøring</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Hovedrengøring</h3>
               <p className="text-gray-600 mb-6">
                 Grundig gennemgående rengøring fra top til tå.
               </p>
