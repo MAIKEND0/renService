@@ -257,7 +257,7 @@ export default function HomePage() {
             </div>
 
             {/* Office Cleaning */}
-            <div className="shine bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-2 border border-blue-100 relative group">
+            <div className="shine bg-slate-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:-translate-y-2 border-2 border-cyan-500/40 relative group">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/images/office-cleaning.jpg"
@@ -265,35 +265,35 @@ export default function HomePage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
               </div>
               <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-blue-500/50 clean-glow">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-cyan-500/70 clean-glow animate-pulse">
                   <Building2 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Kontorrengøring</h3>
-              <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">Kontorrengøring</h3>
+              <p className="text-gray-300 mb-6">
                 Professionel rengøring af kontorer og erhvervslokaler.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Daglig eller ugentlig rengøring</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Daglig eller ugentlig rengøring</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Sanitetsrum og køkkener</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Sanitetsrum og køkkener</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Fleksible tidsplaner</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Fleksible tidsplaner</span>
                 </li>
               </ul>
               </div>
             </div>
 
             {/* Deep Cleaning */}
-            <div className="shine bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-2 border border-blue-100 relative group">
+            <div className="shine bg-slate-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:-translate-y-2 border-2 border-cyan-500/40 relative group">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/images/deep-cleaning.jpg"
@@ -301,28 +301,28 @@ export default function HomePage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
               </div>
               <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-blue-500/50 clean-glow animate-pulse">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg shadow-cyan-500/70 clean-glow animate-pulse">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Hovedrengøring</h3>
-              <p className="text-gray-600 mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">Hovedrengøring</h3>
+              <p className="text-gray-300 mb-6">
                 Grundig gennemgående rengøring fra top til tå.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Alle overflader og hjørner</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Alle overflader og hjørner</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Skabe og hylder</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Skabe og hylder</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Perfekt til flytning</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Perfekt til flytning</span>
                 </li>
               </ul>
               </div>
