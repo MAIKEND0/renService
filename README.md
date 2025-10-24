@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RenService - Strona Firmy Sprzątającej
 
-## Getting Started
+Profesjonalna strona one-page dla firmy sprzątającej w języku duńskim, stworzona w Next.js.
 
-First, run the development server:
+## Funkcje
+
+- **Hero Section z wideo w tle** - Pełnoekranowa sekcja z profesjonalnym wideo sprzątania jako tło
+  - Automatyczne odtwarzanie w pętli
+  - Ciemna nakładka dla lepszej czytelności tekstu
+  - Animowany wskaźnik przewijania
+- **O nas** - Sekcja przedstawiająca firmę i wartości
+- **Se os i aktion (Zobacz nas w akcji)** - Druga sekcja wideo z ciemnym tłem
+  - Grid layout z tekstem i wideo
+  - Pokazuje profesjonalizm i proces sprzątania
+  - Dekoracyjne elementy gradient w tle
+- **Usługi** - Trzy główne kategorie z własnymi zdjęciami:
+  - Privat rengøring (sprzątanie domów)
+  - Kontorrengøring (sprzątanie biur)
+  - Hovedrengøring (głębokie czyszczenie)
+- **Kontakt** - Formularz kontaktowy z danymi:
+  - Telefon: 50 12 44 22
+  - Email: milanjarysz@gmail.com
+- **Responsywna nawigacja** - Działa na wszystkich urządzeniach
+- **Nowoczesny design** - Tailwind CSS z gradient, cieniami i płynnymi animacjami
+- **Wysokiej jakości multimedia** - 2x UHD wideo (3840x2160) + obrazy dla kart usług
+  - Wideo tło w Hero Section
+  - Wideo w sekcji "Se os i aktion"
+
+## Uruchomienie
 
 ```bash
+# Instalacja zależności
+npm install
+
+# Uruchomienie serwera deweloperskiego
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build produkcyjny
+npm run build
+
+# Start produkcyjny
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Strona będzie dostępna pod adresem: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologie
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS
+- Lucide React (ikony)
 
-## Learn More
+## Struktura projektu
 
-To learn more about Next.js, take a look at the following resources:
+```
+cleaning-service/
+├── app/
+│   ├── page.tsx          # Główna strona one-page
+│   ├── layout.tsx        # Layout aplikacji
+│   └── globals.css       # Style globalne
+├── public/               # Pliki statyczne
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dodanie prawdziwych zdjęć
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Obecnie strona używa placeholder obrazów SVG. Aby dodać prawdziwe zdjęcia:
 
-## Deploy on Vercel
+1. Pobierz **DARMOWE** wysokiej jakości zdjęcia z:
+   - **Unsplash** (https://unsplash.com) - wyszukaj "cleaning", "house cleaning"
+   - **Pexels** (https://www.pexels.com) - wyszukaj "cleaning service"
+   - **Pixabay** (https://pixabay.com) - wyszukaj "housekeeping"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Potrzebne pliki (zapisz w `/public/images/`):
+   - `hero-cleaning.jpg` - Główne zdjęcie sprzątania (1200x800px+)
+   - `home-cleaning.jpg` - Sprzątanie domu (800x600px+)
+   - `office-cleaning.jpg` - Sprzątanie biura (800x600px+)
+   - `deep-cleaning.jpg` - Głębokie czyszczenie (800x600px+)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Po dodaniu zdjęć, odśwież stronę - będą automatycznie załadowane!
+
+📖 Szczegółowe instrukcje: `/public/images/README.md`
+
+## Customizacja
+
+Możesz łatwo dostosować:
+- Kolory - zmień `blue-600` na inny kolor w `page.tsx`
+- Treść - edytuj teksty w sekcjach
+- Logo - zamień nazwę "RenService" na swoją
+- Dane kontaktowe - zaktualizuj telefon i email
+- Zdjęcia - zamień placeholdery na prawdziwe zdjęcia (patrz wyżej)
+
+## Deploy
+
+Strona jest gotowa do wdrożenia na:
+- Vercel (rekomendowane dla Next.js)
+- Netlify
+- Dowolny hosting Node.js
+
+## Kontakt
+
+Milan Jarysz
+- Telefon: 50 12 44 22
+- Email: milanjarysz@gmail.com
